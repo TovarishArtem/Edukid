@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Edukid</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="{% static 'my_classes/js/script.js' %}"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header_content container">
+				<nav class="menu_body">
+					<div class="burger">
+						<div class="header__burger" id="burger">
+							<span></span>
+							<div class="header__burger-menu">
+								<ul class="burger-list">
+									<li>
+										<img src="{% static 'main/images/svg/burger1.svg' %}">
+										<a href="">Мой класс</a>
+									</li>
+									<li>
+										<img src="{% static 'main/images/svg/burger2.svg' %}">ы
+										<a href="">Мои тетради</a>
+									</li>
+									<li>
+										<img src="{% static 'main/images/svg/burger3.svg' %}">
+										<a href="">Задания</a>
+									</li>
+									<li>
+										<img src="{% static 'main/images/svg/burger4.svg' %}">
+										<a href="/progress">Успеваемость</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="logo">
+						<a href="/home">Edukid</a>
+					</div>
+					<ul class="menu_list">
+						<li><a href="" class="menu_link">Мой класс</a></li>
+						<li><a href="" class="menu_link">Мои тетради</a></li>
+						<li><a href="" class="menu_link">Задания</a></li>
+						<li><a href="/progress" class="menu_link">Успеваемость</a></li>
+					</ul>
+					<div class="sign-button">
+						<a class="sign-btn" href="profile"><button id="sign-btn">Профиль</button></a>
+						<img src="{% static 'my_classes/images/jpg/profile-img-ex.jpg' %}">
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<section>
+			<h1>Добавить задание</h1>
+			<div class="sec">
+				<div class="big_container">
+					<div class="outer">
+						<div class="outer1">
+							<h2>Название</h2>
+                            <div class="block">
+							     <input class="title" type ="text" name="" title="Введите название">
+                            </div>
+						</div>
+
+						<div class="outer2">
+							<button class="btn borang">Добавить</button>
+							<button class="btn bwhite">Отмена</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="app-container">
+					<!-- <div class="left-board">
+						<h2>Задание</h2>
+						<h2>Дата выполнения</h2>
+						<h2>Формат сдачи</h2>
+						<h2>Добавить фотографию блаблабал</h2>
+						<h2>Предмет</h2>
+						<h2>Кому задать?</h2>
+					</div> -->
+
+					<div class="class-box">
+						<div class="main-block">
+							<h2>Задание</h2>
+							<div class="block">
+								<textarea cols="53" rows="9" maxlength="300" title="Введите задание"></textarea>
+							</div>
+							<button class="btn borang">Загрузить фото</button>
+						</div>
+					</div>
+
+					<div class="class-box">
+						<div class="main-block">
+							<h2>Дата выполнения</h2>
+							<div class="block">
+								<input class="date" type="date">
+							</div>
+						</div>
+					</div>
+
+					<div class="class-box">
+						<div class="main-block">
+							<h2>Формат сдачи</h2>
+							<div class="block">
+								<button class="btn borang">Фотография</button>
+								<button class="btn bwhite">Аудио</button>
+								<button class="btn bwhite">Текст</button>
+								<button class="btn bwhite">Видео</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="class-box">
+						<div class="main-block">
+							<h2>Предмет</h2>
+							<div class="block">
+								<input list="discipline" id="disciplinetwo" placeholder="Введите дисциплину">
+									<datalist id="discipline">
+										<option value="Математика">
+										<option value="Русский">
+										<option value="Литература">
+									</datalist>
+							</div>
+						</div>
+					</div>
+
+					<div class="class-box">
+						<div class="main-block">
+							<h2>Кому задать?</h2>
+							<div class="komy">
+								<div class="klass">Классы
+									<img src="{% static 'profile/images/svg/drop-menu-icon.svg' %}">
+								</div>
+
+								<div class="block-klass">
+									<dd>Класс 4П</dd>
+									<p class="line"></p>
+									<dd>Класс 7Ш </dd>
+									<p class="line"></p>
+									<dd>Класс 2В</dd>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					
+
+
+
+					<!-- <div class="class-box">
+						<button class="btn-in-profile" id="class-btn">Русский Язык<img src="{% static 'my_classes/images/svg/arrow.svg' %}"></button>
+						<div class="profile-box">
+							<div class="student-box">
+								<div class="student-img">
+									<img src="{% static 'my_classes/images/jpg/profile-img-ex.jpg' %}">
+								</div>
+								<div class="btn-in-profile">Задание 1</div>
+								<div class="student-delete">
+									<img src="{% static 'my_classes/images/svg/delete.svg' %}">
+								</div>
+								<div class="student-add">
+									<span>Добавить ученика:</span>
+									<input type="text" name="" title="Введите код ребенка">
+									<button class="btn-in-profile"><img class="plus-img" src="{% static 'my_classes/images/svg/plus.svg' %}">Добавить</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="line"></div>
+					<div class="class-box">
+						<button class="btn-in-profile" id="class-btn"><img src="{% static 'my_classes/images/svg/plus.svg' %}">Добавить дисциплину</button>
+					</div>
+					<div class="class-box">
+					<button class="btn-in-profile"><img class="plus-img" src="{% static 'my_classes/images/svg/plus.svg' %}">Добавить Задание</button>
+					</div> -->
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>
